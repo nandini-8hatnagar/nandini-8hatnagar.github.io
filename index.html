@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandini Bhatnagar | Portfolio</title>
+
+  <style>
+    /* --- BASIC STYLES --- */
+    body {
+      margin: 0;
+      font-family: "Trebuchet", Arial, sans-serif;
+      color: #222;
+      background-color: #fefefe;
+      scroll-behavior: smooth;
+    }
+
+    /* --- NAVIGATION BAR --- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc33;
+    }
+
+    /* --- SECTIONS --- */
+    section {
+      padding: 100px 10% 80px;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    #home {
+      background: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ddd;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* --- PROJECTS --- */
+    .project {
+      margin-bottom: 25px;
+    }
+
+    .project a {
+      font-weight: 700;
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .project a:hover {
+      color: #ff5733;
+    }
+
+    /* --- CONTACT --- */
+    #contact a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    #contact a:hover {
+      color: #ff5733;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      background: #222;
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <section id="home">
+    <h1>Hi, I'm Nandini</h1>
+    <p>City Professional | Urban Data & Policy | GIS & Spatial Analysis Enthusiast</p>
+    <p>I use <strong>QGIS</strong>, <strong>Google Earth Engine</strong>, and <strong>R</strong> to explore urban spatial data.</p>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a city governance and spatial data student and enthusiast.
+      My work focuses on urban policy, planning, and spatial analysis.
+      I enjoy using data to draw meaningful insights for urban systems.
+    </p>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <a href="projects/thrissur-flood-vulnerability/index.html" target="_blank">Thrissur Flood Vulnerability Mapping</a> – Identifying the most vulnerable zones in the city using GEE and QGIS.
+    </div>
+
+    <div class="project">
+      <a href="projects/thrissur-land-use-classification/index.html" target="_blank">Thrissur Supervised Land Use Classification</a> – Mapping land use changes in Thrissur from 2019 to 2025 using GEE.
+    </div>
+
+    <div class="project">
+      <a href="projects/thrissur-land-cover-change/index.html" target="_blank">Thrissur Land Cover Change Mapping</a> – Assessing changes in vegetation, built-up, and water cover from 2015 to 2025 using QGIS.
+    </div>
+
+    <div class="project">
+      <a href="projects/thrissur-spatial-features/index.html" target="_blank">Mapping Spatial Features in Thrissur</a> – Visualising points, lines, and polygons using QGIS.
+    </div>
+
+    <div class="project">
+      <a href="projects/thiruvananthapuram-budget-analysis/index.html" target="_blank">Thiruvananthapuram Municipal Budget Analysis</a> – Understanding revenue sources and expenditure priorities in the municipal budget.
+    </div>
+
+    <div class="project">
+      <a href="projects/thrissur-city-profile-and-analytics/index.html" target="_blank">Thrissur City Profile and Analytics</a> – Visualising demographic profile, literacy, and workforce participation using R.
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" style="text-align:center;">
+    <h2>Contact</h2>
+    <p>
+    <a href="mailto:nbhatnagar268@gmail.com">Email</a> |
+    <a href="https://www.linkedin.com/in/nandini-bhatnagar-a09021324" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/nandini-8hatnagar" target="_blank">GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Nandini Bhatnagar | Built using GitHub Pages
+  </footer>
+
+</body>
+</html>
