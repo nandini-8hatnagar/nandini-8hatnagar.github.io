@@ -16,12 +16,21 @@
     }
     /* Add a banner/header */
 header {
-  background: linear-gradient(135deg, #4b79a1, #283e51);
-  color: white;
+  position: relative; 
+  color: white; 
   text-align: center;
-  padding: 80px 20px;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  ),
+  url('assets/header.jpg') center/cover no-repeat;
 }
-
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(3px);
+}
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
@@ -32,6 +41,15 @@ header p {
   font-weight: 300;
 }
 
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+        
 .profile-pic {
   width: 180px;
   height: 180px;
@@ -40,6 +58,12 @@ header p {
   display: block;
   margin: 20px auto;
   border: 3px solid #4b79a1; /* matches your banner color */
+}
+
+    .about-text {
+      max-width: 600px;
+      font-size: 1.1rem;
+      line-height: 1.6;
 }
 
     /* --- NAVIGATION BAR --- */
@@ -134,10 +158,10 @@ header p {
 
   <!-- NAVIGATION -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <!-- HOME SECTION -->
@@ -147,55 +171,6 @@ header p {
     <p>I use <strong>QGIS</strong>, <strong>Google Earth Engine</strong>, and <strong>R</strong> to explore urban spatial data.</p>
   </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="assets/image.JPG" alt="Nandini Bhatnagar" class="profile-pic">
-    <p>
-      I’m a city governance and spatial data student and enthusiast.
-      My work focuses on urban policy, planning, and spatial analysis.
-      I enjoy using data to draw meaningful insights for urban systems.
-    </p>
-  </section>
-
-  <!-- PROJECTS SECTION -->
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3 href="projects/thrissur-flood-vulnerability/index.html" target="_blank">Thrissur Flood Vulnerability Mapping</h3><embed src="projects/thrissur-flood-vulnerability/Thrissur Flood Vulnerability Assessment.pdf" type="application/pdf" width="100%" height="600px"/>– Identifying the most vulnerable zones in the city using GEE and QGIS.
-    </div>
-
-    <div class="project">
-      <h3 href="projects/thrissur-land-use-classification/index.html" target="_blank">Thrissur Supervised Land Use Classification</h3><embed src="projects/thrissur-land-use-classification/Thrissur Supervised Land Use Classification.pdf" type="application/pdf" width="100%" height="600px"/> – Mapping land use changes in Thrissur from 2019 to 2025 using GEE.
-    </div>
-
-    <div class="project">
-      <h3 href="projects/thrissur-land-cover-change/index.html" target="_blank">Thrissur Land Cover Change Mapping</h3><embed src="projects/thrissur-land-cover-change/Thrissur Land Cover Change.pdf" type="application/pdf" width="100%" height="600px"/> – Assessing changes in vegetation, built-up, and water cover from 2015 to 2025 using QGIS.
-    </div>
-
-    <div class="project">
-      <h3 href="projects/thrissur-spatial-features/index.html" target="_blank">Mapping Spatial Features in Thrissur</h3><embed src="projects/thrissur-spatial-features/Thrissur Digitised.pdf" type="application/pdf" width="100%" height="600px"/> – Visualising points, lines, and polygons using QGIS.
-    </div>
-
-    <div class="project">
-      <h3 href="projects/thiruvananthapuram-budget-analysis/index.html" target="_blank">Thiruvananthapuram Municipal Budget Analysis</h3><embed src="projects/thiruvananthapuram-budget-analysis/Thiruvananthapuram Budget Analysis (2015-2024).pdf" type="application/pdf" width="100%" height="600px"/> – Understanding revenue sources and expenditure priorities in the municipal budget.
-    </div>
-
-    <div class="project">
-      <h3 href="projects/thrissur-city-profile-and-analytics/index.html" target="_blank">Thrissur City Profile and Analytics</h3><embed src="projects/thrissur-city-profile-and-analytics/THRISSUR_ City Profile & Analytics.pdf" type="application/pdf" width="100%" height="600px"/> – Visualising demographic profile, literacy, and workforce participation using R.
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact" style="text-align:center;">
-    <h2>Contact</h2>
-    <p>
-    <a href="mailto:nbhatnagar268@gmail.com">Email</a> |
-    <a href="https://www.linkedin.com/in/nandini-bhatnagar-a09021324" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/nandini-8hatnagar" target="_blank">GitHub</a>
-    </p>
-  </section>
 
   <footer>
     © 2025 Nandini Bhatnagar | Built using GitHub Pages
