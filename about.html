@@ -15,6 +15,31 @@
       scroll-behavior: smooth;
     }
 
+    .about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 40px auto;
+  flex-wrap: wrap; /* Helps on small screens */
+}
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4b79a1;
+  flex-shrink: 0;
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
 
     /* --- NAVIGATION BAR --- */
     nav {
