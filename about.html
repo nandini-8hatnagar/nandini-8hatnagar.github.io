@@ -16,12 +16,13 @@
     }
 
     header {
-  background: #e9eff5;
+  position: relative; 
+  color: white; 
   text-align: center;
-  padding: 40px 0;
-  font-size: 2em;
-  color: #333;
-  border-bottom: 2px solid #4b79a1;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  );
 }
 
     .about-container {
@@ -48,6 +49,115 @@
   text-align: left;
   line-height: 1.6;
   font-size: 1.05rem;
+}
+
+    #experience {
+  background-color: #fff;
+  padding: 60px 10%;
+}
+
+#experience h2 {
+  color: #2a3d66;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  background: #f8fbff;
+  border-left: 5px solid #4b79a1;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-4px);
+}
+
+.experience-item h3 {
+  color: #4b79a1;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.experience-item h4 {
+  color: #555;
+  font-weight: normal;
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+
+.experience-item p {
+  color: #333;
+  font-size: 0.95em;
+  line-height: 1.5em;
+}
+
+#skills {
+  background-color: #f1f6fa;
+  text-align: center;
+  padding: 60px 10%;
+}
+
+#skills h2 {
+  color: #2a3d66;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#skills p {
+  color: #444;
+  font-size: 1.1em;
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: white;
+  color: #333;
+  border: 2px solid #4b79a1;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-weight: 500;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  background-color: #4b79a1;
+  color: white;
+  transform: translateY(-3px);
+}
+   
+    .contact-links a {
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 12px 24px;
+  border: 2px solid #4b79a1;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #4b79a1;
+  transition: all 0.3s ease;
+}
+.contact-links a:hover {
+  background: #4b79a1;
+  color: white;
 }
 
     /* --- NAVIGATION BAR --- */
@@ -119,18 +229,45 @@
     </div>
     </div>
 
- <!-- CONTACT SECTION -->
-  <section id="contact" style="text-align:center;">
-    <h2>Contact</h2>
-    <h3>Write to me</h3>
-    <a href="mailto:nbhatnagar268@gmail.com">Email</a>
-   <h3>Connect with me</h3>
-    <a href="https://www.linkedin.com/in/nandini-bhatnagar-a09021324" target="_blank">LinkedIn</a> |
-    <h3>Explore my work</h3>
-    <a href="https://github.com/nandini-8hatnagar" target="_blank">GitHub</a>
-    </p>
+<!-- WORK EX SECTION -->
+    <section id="experience">
+  <h2>Work Experience</h2>
+
+  <div class="experience-container">
+    <div class="experience-item">
+      <h3>Policy Intern</h3>
+      <h4>Jana Urban Space | June 2025 - July 2025</h4>
+      <p>Examined Development Control Regulations, Zoning Regulations, and Building Bye-laws in Master Plans of Indian cities. Developed a synthesis note on the availability and comprehensiveness.
+</p>
+    </div>
+  </div>
+</section>
     
-  </section>
+<!-- SKILLS SECTION -->
+    <section id="skills">
+  <h2>Skills</h2> 
+  <div class="skills-container">
+    <div class="skill-card">Urban Policy Research</div>
+    <div class="skill-card">Budget Analysis</div>
+<div class="skill-card">Data Visualization</div>
+<div class="skill-card">QGIS</div>
+    <div class="skill-card">Google Earth Engine</div>
+    <div class="skill-card">R</div>
+    <div class="skill-card">Satellite Image Analysis</div>
+    <div class="skill-card">Excel</div>
+          </div>
+</section>
+    
+ <!-- CONTACT SECTION -->
+  <section id="contact">
+  <h2>Contact</h2>
+  <p>Let’s connect! I’d love to hear from you.</p>
+  <div class="contact-links">
+    <a href="mailto:nbhatnagar268@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+    <a href="https://www.linkedin.com/in/nandini-bhatnagar-a09021324" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    <a href="https://github.com/nandini-8hatnagar" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+  </div>
+</section>
 
   <footer>
     <p>
