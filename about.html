@@ -145,13 +145,6 @@ color: #2a3d66;
   margin-bottom: 40px;
 }
 
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
 .skill-card {
   background-color: white;
   color: #333;
@@ -161,6 +154,17 @@ color: #2a3d66;
   font-weight: 500;
   font-size: 1em;
   transition: all 0.3s ease;
+  flex: 1 1 calc(25% - 20px); /* roughly 4 cards per row */
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .skill-card:hover {
@@ -168,7 +172,11 @@ color: #2a3d66;
   color: white;
   transform: translateY(-3px);
 }
-   
+    
+.contact-links {
+  text-align: center;
+}
+    
     .contact-links a {
   display: inline-block;
   margin: 10px 20px;
@@ -239,8 +247,26 @@ p {
   background: #222;
   color: #ccc;
   text-align: center;
-  padding: 30px 0;
+  padding: 25px 0;
   margin: 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
   </style>
@@ -255,7 +281,7 @@ p {
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
   </nav>
-
+<main>
 <header>
   <h1>ABOUT</h1>
 </header>
@@ -313,7 +339,7 @@ p {
     <a href="https://github.com/nandini-8hatnagar" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
   </div>
 </section>
-
+  </main>
   <footer>
     <p>
       <a href="mailto:nbhatnagar268@gmail.com">Email</a> |
