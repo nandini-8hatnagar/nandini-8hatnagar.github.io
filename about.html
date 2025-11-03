@@ -15,14 +15,25 @@
       scroll-behavior: smooth;
     }
 
-    header {
-  position: relative; 
-  color: white; 
+  header {
+  position: relative;
+  color: white;
   text-align: center;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.4)
-  );
+  padding: 100px 20px;
+  background: 
+    linear-gradient(135deg, #4b79a1, #283e51)
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.1em;
+  margin-top: 10px;
+  opacity: 0.9;
 }
 
     .about-container {
@@ -186,11 +197,23 @@
     }
 
     /* --- SECTIONS --- */
+    
     section {
-      padding: 100px 10% 80px;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
+  padding: 40px 8%;  /* reduce vertical padding */
+  margin: 0 auto;
+}
+
+section:last-of-type {
+  padding-bottom: 40px;  /* avoid huge gaps at bottom */
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+}
    
     footer {
       text-align: center;
