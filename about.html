@@ -146,16 +146,16 @@ color: #2a3d66;
 }
 
 .skill-card {
+  display: inline-block;
   background-color: white;
   color: #333;
   border: 2px solid #4b79a1;
-  border-radius: 25px;
-  padding: 12px 25px;
+  border-radius: 12px;
+  padding: 10px 20px;
   font-weight: 500;
   font-size: 1em;
   transition: all 0.3s ease;
-  flex: 1 1 calc(25% - 20px); /* roughly 4 cards per row */
-  text-align: center;
+  white-space: nowrap; /* ensures no awkward text wrapping */
 }
 
 .skills-container {
@@ -179,18 +179,24 @@ color: #2a3d66;
     
     .contact-links a {
   display: inline-block;
-  margin: 10px 20px;
-  padding: 12px 24px;
+  margin: 10px 15px;
+  padding: 15px 25px;
   border: 2px solid #4b79a1;
-  border-radius: 25px;
+  border-radius: 10px; /* square-ish rounded corners */
   text-decoration: none;
   color: #4b79a1;
+  font-weight: 500;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
+
 .contact-links a:hover {
   background: #4b79a1;
   color: white;
+  transform: translateY(-3px);
 }
+
     #contact h2 {
   color: #2a3d66;
   font-size: 2em;
