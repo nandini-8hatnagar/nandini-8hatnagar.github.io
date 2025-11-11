@@ -50,11 +50,50 @@ header {
 
     /* --- SECTIONS --- */
     section {
-      padding: 100px 10% 80px;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
+  padding: 80px 10%;
+  box-sizing: border-box;
+}
 
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 15px;
+  color: #4b79a1;
+  font-size: 1.2em;
+}
+
+.project-card p {
+  margin: 0 15px 20px;
+  font-size: 0.95em;
+  color: #444;
+}
+    
 .modal {
   display: none; /* Hidden by default */
   position: fixed;
@@ -69,12 +108,12 @@ header {
 .modal-content {
   position: relative;
   background: #fff;
-  margin: 5% auto;
+  margin: 3% auto;
   padding: 20px;
   border-radius: 10px;
-  width: 80%;
-  max-width: 900px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .close {
@@ -117,11 +156,11 @@ header {
 
     <div class="project-card" onclick="openModal('projects/thrissur-land-use-classification/Thrissur-Supervised-Land-Use-Classification.pdf')">
     <img src="projects/thrissur-land-use-classification/landuse.png" alt="Land Use Classification Preview">
-      <h3>Thrissur Supervised Land Use Classification</h3> Mapping land use changes in Thrissur from 2019 to 2025 using GEE. <p></p><embed src="projects/thrissur-land-use-classification/Thrissur-Supervised-Land-Use-Classification.pdf" type="application/pdf" width="100%" height="600px"/> 
+      <h3>Thrissur Supervised Land Use Classification</h3> <p>Mapping land use changes in Thrissur from 2019 to 2025 using GEE.</p> 
     </div>
 
     <div class="project-card" onclick="openModal('projects/thrissur-land-cover-change/Thrissur-Land-Cover-Change.pdf')">
-    <img src="projects/thrissur-land-cover/landcover.png" alt="Land Cover Change Preview">
+    <img src="projects/thrissur-land-cover-change/landcover.png" alt="Land Cover Change Preview">
       <h3>Thrissur Land Cover Change Mapping</h3>  <p>Assessing changes in vegetation, built-up, and water cover from 2015 to 2025 using QGIS.</p>    </div>
 
     <div class="project-card" onclick="openModal('projects/thrissur-spatial-features/Thrissur-Digitised.pdf')">
