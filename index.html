@@ -150,34 +150,51 @@ header p {
   padding: 80px 10%;
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
 .project-card {
   background: white;
   border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 300px;
+  text-align: left;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
-.project-card h3 a {
-  color: #4b79a1;
-  text-decoration: none;
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  color: #2a3d66;
+  margin: 15px;
 }
 
 .project-card p {
-  color: #555;
-  font-size: 0.95rem;
+  margin: 0 15px 20px;
+  color: #444;
+  font-size: 0.95em;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #4b79a1;
+}
+
+.project-card a:hover {
+  color: #283e51;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
     
     footer {
@@ -209,16 +226,19 @@ header p {
   <h2>Featured Projects</h2>
   <div class="project-grid">
     <div class="project-card">
+      <img src="projects/thrissur-flood-vulnerability/floodzone.png" alt="Thrissur Flood Vulnerability Preview">
       <h3><a href="projects/thrissur-flood-vulnerability/index.html">Thrissur Flood Vulnerability Mapping</a></h3>
       <p>Mapping flood-prone zones in Thrissur using GEE and QGIS.</p>
     </div>
 
     <div class="project-card">
+      <img src="projects/thrissur-land-use-classification/landuse.png" alt="Thrissur Land Use Classification Preview">
       <h3><a href="projects/thrissur-land-use-classification/index.html">Thrissur Land Use Change Detection</a></h3>
       <p>Tracking land use changes from 2019 to 2025 using satellite data.</p>
     </div>
 
     <div class="project-card">
+      <img src="projects/thiruvananthapuram-budget-analysis/budget.png" alt="Thiruvananthapuram Budget Analysis Preview">
       <h3><a href="projects/thiruvananthapuram-budget-analysis/index.html">Thiruvananthapuram Budget Analysis</a></h3>
       <p>Examining municipal revenue sources, expenditure priorities, and data gaps.</p>
     </div>
