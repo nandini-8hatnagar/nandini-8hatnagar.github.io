@@ -140,6 +140,13 @@
   max-width: 900px;
   margin: 0 auto;
 }
+
+    #skills h2 {
+  color: #2a3d66;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 40px;
+    }
     
 .contact-links {
   display: flex;
@@ -170,12 +177,22 @@
   }
 
 /* Icon graphics */
+.icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #4b79a1;
+  position: relative;
+}
+
 .email-icon::before {
-  content: "✉";
+  content: "✉"; /* plain text envelope (not emoji) */
   position: absolute;
   color: white;
-  font-size: 20px;
-  top: 6px;
+  font-size: 22px;
+  top: 7px;
   left: 9px;
 }
 
@@ -187,7 +204,7 @@
   font-family: Arial, sans-serif;
   font-size: 18px;
   top: 8px;
-  left: 11px;
+  left: 12px;
 }
 
 .github-icon::before {
@@ -200,45 +217,16 @@
   left: 8px;
 }
 
-/* Text section */
-.contact-text a {
-  display: block;
-  font-weight: 600;
-  font-size: 1.1em;
-  color: #4b79a1;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-text p {
-  margin: 2px 0 0;
-  font-size: 0.9em;
-  color: #333;
-  opacity: 0.8;
-  transition: color 0.3s ease;
-}
-
-/* Hover states — everything turns white text, blue icons */
+/* Optional hover animation */
 .contact-card:hover .icon {
   background: white;
-  border: 2px solid white;
+  border: 2px solid #4b79a1;
 }
 
 .contact-card:hover .icon::before {
   color: #4b79a1;
 }
 
-.contact-card:hover a,
-.contact-card:hover p {
-  color: white;
-}
-
-@media (max-width: 600px) {
-  .contact-card {
-    width: 100%;
-    max-width: 280px;
-  }
-}
 
 
     /* --- NAVIGATION BAR --- */
