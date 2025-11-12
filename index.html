@@ -40,37 +40,7 @@ header p {
   font-size: 1.2rem;
   font-weight: 300;
 }
-    #home {
-  position: relative;
-  background: url('assets/header.jpg') center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-  color: white;
-  overflow: hidden;
-}
-
-/* Frosted overlay */
-#home::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* dark glass tint */
-  backdrop-filter: blur(10px);     /* frosted blur effect */
-  -webkit-backdrop-filter: blur(10px);
-  z-index: 0;
-}
-
-#home h1,
-#home p {
-  position: relative;
-  z-index: 1; /* ensures text sits above frosted layer */
-  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
-}
-
+   
 #home h1 {
   font-size: 3rem;
   margin-bottom: 10px;
@@ -335,6 +305,7 @@ footer a:visited {
     <h1>Hi, I'm Nandini</h1>
     <p>City Professional | Urban Data & Policy | GIS & Spatial Analysis Enthusiast</p>
     <p>I use <strong>QGIS</strong>, <strong>Google Earth Engine</strong>, and <strong>R</strong> to explore urban spatial data.</p>
+    <p>Welcome to my portfolio!</p>
   </section>
 
   <section id="featured-projects">
