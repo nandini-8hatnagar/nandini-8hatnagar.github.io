@@ -197,6 +197,57 @@
   }
 }
 
+    .icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #4b79a1;
+  position: relative;
+}
+
+.email-icon::before {
+  content: "✉"; /* plain text envelope (not emoji) */
+  position: absolute;
+  color: white;
+  font-size: 22px;
+  top: 7px;
+  left: 9px;
+}
+
+.linkedin-icon::before {
+  content: "in";
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  top: 8px;
+  left: 12px;
+}
+
+.github-icon::before {
+  content: "{}";
+  position: absolute;
+  color: white;
+  font-family: monospace;
+  font-size: 18px;
+  top: 8px;
+  left: 8px;
+}
+
+/* Optional hover animation */
+.contact-card:hover .icon {
+  background: white;
+  border: 2px solid #4b79a1;
+}
+
+.contact-card:hover .icon::before {
+  color: #4b79a1;
+}
+
+
     /* --- NAVIGATION BAR --- */
     nav {
       position: fixed;
@@ -340,17 +391,20 @@ main {
   <h2>Contact</h2>
   <div class="contact-links">
   <div class="contact-card">
+    <span class="icon email-icon"></span>
     <a href="mailto:nbhatnagar268@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
     <p>Write to me</p>
   </div>
     
     <div class="contact-card">
-    <a href="https://www.linkedin.com/in/nandini-bhatnagar-a09021324" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    <span class="icon linkedin-icon"></span>
+      <a href="https://www.linkedin.com/in/nandini-bhatnagar-a09021324" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
     <p>Connect with me</p>
     </div>
     
     <div class="contact-card">
-    <a href="https://github.com/nandini-8hatnagar" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+    <span class="icon github-icon"></span>
+      <a href="https://github.com/nandini-8hatnagar" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
     <p>Explore my projects</p>
     </div>
   </div>
