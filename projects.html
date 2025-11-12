@@ -93,6 +93,38 @@ header {
   font-size: 0.95em;
   color: #444;
 }
+
+    /* --- MODAL & CONTENT --- */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  overflow: auto;
+}
+
+.modal-content {
+  position: relative;             /* important: anchors absolute children (nav, close) */
+  background: #fff;
+  margin: 3% auto;
+  padding: 20px 60px;             /* room on sides so side arrows don't overlap content edge */
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+}
+
+/* iframe inside modal */
+#pdfFrame {
+  width: 100%;
+  height: 70vh; /* responsive height */
+  border: none;
+}
     
 .close {
   top: 15px;
@@ -140,12 +172,12 @@ header {
   background: #355b7a;
 }
 
-.nab-btn.prev {
+.nav-btn.prev {
   left: 20px;
 }
 
 .nav-btn.next {
-  right: 20 px
+  right: 20px
 }
     
    footer {
@@ -216,8 +248,10 @@ footer a:visited {
     <img src="projects/thrissur-city-profile-and-analytics/analytics.png" alt="City Profile and Analytics Preview">
       <h3>Thrissur City Profile and Analytics</h3>  <p>Visualising demographic profile, literacy, and workforce participation using R.</p>
     </div>
+    
+  </section>
 
-    <!-- MODAL (hidden by default) -->
+  <!-- MODAL (hidden by default) -->
 <div id="pdfModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
@@ -226,9 +260,7 @@ footer a:visited {
       <button class="nav-btn prev" onclick="prevProject()">&#10094; Prev</button>
       <button class="nav-btn next" onclick="nextProject()">Next &#10095;</button>
 </div>
-    
-  </section>
-
+  
 <footer>
     <p>
       <a href="mailto:nbhatnagar268@gmail.com">Email</a> |
