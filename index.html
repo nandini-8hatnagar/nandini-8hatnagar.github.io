@@ -196,6 +196,96 @@ header p {
   gap: 30px;
   margin-top: 40px;
 }
+
+     /* --- MODAL & CONTENT --- */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  overflow: auto;
+}
+
+.modal-content {
+  position: relative;             /* important: anchors absolute children (nav, close) */
+  background: #fff;
+  margin: 3% auto;
+  padding: 20px 60px;             /* room on sides so side arrows don't overlap content edge */
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+}
+
+/* iframe inside modal */
+#pdfFrame {
+  width: 100%;
+  height: 70vh; /* responsive height */
+  border: none;
+}
+    
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #4b79a1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  z-index: 10002;
+}
+
+.close:hover {
+  color: #283e51;
+  transform: scale(1.2);
+}
+
+
+/* Navigation buttons */
+.modal-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(75, 121, 161, 0.95);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10001;
+}
+
+.nav-btn:hover {
+  background: #355b7a;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-btn.prev {
+  left: 15px;
+}
+
+.nav-btn.next {
+  right: 15px
+}
     
     footer {
   width: 100%;
@@ -241,26 +331,37 @@ footer a:visited {
   <section id="featured-projects">
   <h2>Featured Projects</h2>
   <div class="project-grid">
-    <div class="project-card">
+    
+    <div class="project-card" onclick="openModal('projects/thrissur-flood-vulnerability/Thrissur-Flood-Vulnerability-Assessment.pdf')">
       <img src="projects/thrissur-flood-vulnerability/floodzone.png" alt="Thrissur Flood Vulnerability Preview">
-      <h3><a href="projects/thrissur-flood-vulnerability/index.html">Thrissur Flood Vulnerability Mapping</a></h3>
+      <h3>Thrissur Flood Vulnerability Mapping</h3>
       <p>Mapping flood-prone zones in Thrissur using GEE and QGIS.</p>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" onclick="openModal('projects/thrissur-land-use-classification/Thrissur-Supervised-Land-Use-Classification.pdf')">
       <img src="projects/thrissur-land-use-classification/landuse.png" alt="Thrissur Land Use Classification Preview">
-      <h3><a href="projects/thrissur-land-use-classification/index.html">Thrissur Land Use Change Detection</a></h3>
+      <h3>Thrissur Land Use Change Detection</h3>
       <p>Tracking land use changes from 2019 to 2025 using satellite data.</p>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" onclick="openModal('projects/thiruvananthapuram-budget-analysis/Thiruvananthapuram-Budget-Analysis-2015-2024.pdf')">
       <img src="projects/thiruvananthapuram-budget-analysis/budget.png" alt="Thiruvananthapuram Budget Analysis Preview">
-      <h3><a href="projects/thiruvananthapuram-budget-analysis/index.html">Thiruvananthapuram Budget Analysis</a></h3>
+      <h3>Thiruvananthapuram Budget Analysis</h3>
       <p>Examining municipal revenue sources, expenditure priorities, and data gaps.</p>
     </div>
+
   </div>
 </section>
 
+  <div id="pdfModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <iframe id="pdfFrame" src="" width="100%" height="600px"></iframe>
+
+    <button class="nav-btn prev" onclick="prevProject()">&#10094;</button>
+    <button class="nav-btn next" onclick="nextProject()">&#10095;</button>
+  </div>
+</div>
 
   <footer>
     <p>
@@ -271,5 +372,37 @@ footer a:visited {
     © 2025 Nandini Bhatnagar | Built using GitHub Pages
   </footer>
 
+  <script>
+const projectPDFs = [
+  "projects/thrissur-flood-vulnerability/Thrissur-Flood-Vulnerability-Assessment.pdf",
+  "projects/thrissur-land-use-classification/Thrissur-Supervised-Land-Use-Classification.pdf",
+  "projects/thiruvananthapuram-budget-analysis/Thiruvananthapuram-Budget-Analysis-2015-2024.pdf"
+];
+
+let currentProjectIndex = 0;
+
+function openModal(pdfPath) {
+  currentProjectIndex = projectPDFs.indexOf(pdfPath);
+  document.getElementById("pdfFrame").src = pdfPath;
+  document.getElementById("pdfModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("pdfModal").style.display = "none";
+  document.getElementById("pdfFrame").src = "";
+}
+
+function prevProject() {
+  currentProjectIndex = (currentProjectIndex - 1 + projectPDFs.length) % projectPDFs.length;
+  document.getElementById("pdfFrame").src = projectPDFs[currentProjectIndex];
+}
+
+function nextProject() {
+  currentProjectIndex = (currentProjectIndex + 1) % projectPDFs.length;
+  document.getElementById("pdfFrame").src = projectPDFs[currentProjectIndex];
+}
+</script>
+
+  
 </body>
 </html>
