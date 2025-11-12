@@ -146,7 +146,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 30px;
+  margin: 30px auto 50px;
 }
 
 .contact-card {
@@ -184,6 +184,17 @@
   margin: 0;
   font-size: 0.95em;
   opacity: 0.8;
+}
+
+.contact-card:hover p {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .contact-card {
+    width: 100%;
+    max-width: 280px;
+  }
 }
 
     /* --- NAVIGATION BAR --- */
