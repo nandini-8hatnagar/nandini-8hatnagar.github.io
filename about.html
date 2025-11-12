@@ -32,13 +32,15 @@
   object-fit: cover;
   border: 3px solid #4b79a1;
   flex-shrink: 0;
+  imae-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .about-text {
   max-width: 600px;
   text-align: left;
-  line-height: 1.6;
-  font-size: 1.05rem;
+  line-height: 1.75;
+  font-size: 1.2rem;
 }
 
  #about h2 {
@@ -158,42 +160,44 @@
 
 .contact-card {
   display: flex;
+  flex-direction: column;  /* icon above text */
   align-items: center;
-  gap: 15px;
   background: white;
   border: 2px solid #4b79a1;
   border-radius: 15px;
   width: 200px;
   padding: 20px;
-  text-align: left;
+  text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .contact-card:hover {
   background: #4b79a1;
   color: white;
   transform: translateY(-5px);
-  }
+}
 
-/* Icon graphics */
+/* ICONS */
 .icon {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   margin-bottom: 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   background: #4b79a1;
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .email-icon::before {
-  content: "✉"; /* plain text envelope (not emoji) */
+  content: "✉"; /* plain text, not emoji */
   position: absolute;
   color: white;
   font-size: 22px;
-  top: 7px;
-  left: 9px;
+  top: 8px;
+  left: 11px;
 }
 
 .linkedin-icon::before {
@@ -203,8 +207,8 @@
   font-weight: bold;
   font-family: Arial, sans-serif;
   font-size: 18px;
-  top: 8px;
-  left: 12px;
+  top: 10px;
+  left: 13px;
 }
 
 .github-icon::before {
@@ -213,21 +217,48 @@
   color: white;
   font-family: monospace;
   font-size: 18px;
-  top: 8px;
-  left: 8px;
+  top: 9px;
+  left: 10px;
 }
 
-/* Optional hover animation */
+/* Hover color inversion */
 .contact-card:hover .icon {
   background: white;
-  border: 2px solid #4b79a1;
+  border: 2px solid #fff;
 }
 
 .contact-card:hover .icon::before {
   color: #4b79a1;
 }
 
+.contact-card a {
+  display: block;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #4b79a1;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
 
+.contact-card p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.contact-card:hover a,
+.contact-card:hover p {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .contact-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
 
     /* --- NAVIGATION BAR --- */
     nav {
